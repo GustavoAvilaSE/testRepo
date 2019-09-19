@@ -424,6 +424,32 @@
     <partitionschemas>
     </partitionschemas>
     <slaveservers>
+      <slaveserver>
+        <name>carte_vm</name>
+        <hostname>192.168.56.1</hostname>
+        <port>8088</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>testing</name>
+        <hostname>127.0.0.1</hostname>
+        <port>9999</port>
+        <webAppName/>
+        <username>hoster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb79a67fcd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
@@ -445,6 +471,11 @@
     <hop>
       <from>Find WGS84 Latitude and Longitude</from>
       <to>XML Output</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Find WGS84 Latitude and Longitude</from>
+      <to>Dummy (do nothing)</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -617,6 +648,31 @@
     <GUI>
       <xloc>534</xloc>
       <yloc>113</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
